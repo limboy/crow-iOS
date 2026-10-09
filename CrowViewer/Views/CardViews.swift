@@ -55,7 +55,7 @@ struct RecordCard: View {
                 .clipped()
         } else if let url {
             // Original shape: the card grows to fit the image.
-            AsyncImage(url: url) { phase in
+            CachedAsyncImage(url: url) { phase in
                 if let image = phase.image {
                     image.resizable().scaledToFit()
                 } else {

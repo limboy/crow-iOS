@@ -16,6 +16,7 @@
 		1955B9D9A2A6FC23FC8BCEDA /* JSONValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFDE9E3920BF5B4C7623EA7 /* JSONValue.swift */; };
 		2189A1FF74B3BC351C14D33E /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A681D3D1411E9B0D9E710B /* GridView.swift */; };
 		2B816A4A162781E3BBF35F93 /* CardViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEE285E186FD01BE86B7418 /* CardViews.swift */; };
+		4D19BA87545651F621DE8466 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9073E9F3F29B8E910ECF03 /* ImageCache.swift */; };
 		62DE081BB4A7E93D1838DD32 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FC22DB338EFE5B8856DD49 /* DashboardView.swift */; };
 		807F9C310FFC7E603A7E1EAD /* ResponseCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012C0BE955CB54851BC6C3DC /* ResponseCache.swift */; };
 		D0A47A693CDC4BD5591BDD7A /* FieldsSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852DF13A1E8FE1548EE764B2 /* FieldsSheet.swift */; };
@@ -41,6 +42,7 @@
 		B0C4B3E12744126690CD8F69 /* CrowViewer.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = CrowViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9D405EFF9CB0BFCA8067459 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		BD204F87AA5FF49D959FB7AC /* RecordDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordDetailView.swift; sourceTree = "<group>"; };
+		DD9073E9F3F29B8E910ECF03 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		E4D00CFF395E7486D3654BCD /* DocumentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentView.swift; sourceTree = "<group>"; };
 		EA0F88EE48DA625D18CE2E98 /* FieldValueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldValueView.swift; sourceTree = "<group>"; };
 		F975CA29717EEFB976157E0F /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				88BF57A67F826CC854EBEF6F /* CrowAPI.swift */,
+				DD9073E9F3F29B8E910ECF03 /* ImageCache.swift */,
 				5F822A1A85CA8FD6C3BF2878 /* RecordLoader.swift */,
 				012C0BE955CB54851BC6C3DC /* ResponseCache.swift */,
 			);
@@ -200,6 +203,7 @@
 				D0A47A693CDC4BD5591BDD7A /* FieldsSheet.swift in Sources */,
 				09DB07183AFB4DB1FC4CA7C5 /* Formatting.swift in Sources */,
 				2189A1FF74B3BC351C14D33E /* GridView.swift in Sources */,
+				4D19BA87545651F621DE8466 /* ImageCache.swift in Sources */,
 				1955B9D9A2A6FC23FC8BCEDA /* JSONValue.swift in Sources */,
 				075476B24A9F1B50965A94B3 /* Models.swift in Sources */,
 				F22E6D10A1C030AB1BD69CE1 /* RecordDetailView.swift in Sources */,
