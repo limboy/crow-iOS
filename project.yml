@@ -16,6 +16,8 @@ targets:
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.limboy.CrowViewer
+        DEVELOPMENT_TEAM: 5P9ZHW7578
+        CODE_SIGN_STYLE: Automatic
         PRODUCT_NAME: Crow
         MARKETING_VERSION: "1.0"
         CURRENT_PROJECT_VERSION: "1"

@@ -146,6 +146,10 @@
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
+					8A012E215897464F7B95D5C7 = {
+						DevelopmentTeam = 5P9ZHW7578;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 4A8F1F70DF01C2E6BA7DAA6B /* Build configuration list for PBXProject "CrowViewer" */;
@@ -274,7 +278,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5P9ZHW7578;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CrowViewer/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Crow;
@@ -301,7 +307,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5P9ZHW7578;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CrowViewer/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Crow;
