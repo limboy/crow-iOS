@@ -1,6 +1,6 @@
 # Crow for iOS
 
-A read-only iOS 26+ viewer for [Crow](../crow) documents, served by [crow-service](../crow-service).
+A read-only iOS 26+ viewer for [Crow](https://github.com/limboy/crow) documents, served by [crow-service](https://github.com/limboy/crow-service).
 
 - **Documents** — every `.crow` document on the server, with its tables and record counts
 - **Saved views** — each table opens on its saved views:
