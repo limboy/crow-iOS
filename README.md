@@ -37,6 +37,11 @@ device, tap the server button and enter your Mac's local address (e.g. `http://1
 
 ## Notes
 
+Responses are cached on the device (in Caches), so documents open instantly and still show when the
+server can't be reached. Opening a document checks its version with crow-service; records are reused
+until it changes, and pull to refresh always asks the server. Against an older crow-service that
+doesn't send versions, the app always fetches and only uses the cache when offline.
+
 Views follow their saved `config` from crow-service (group field, cover field and aspect ratio,
 hidden fields, sorts, row height). Against an older crow-service that doesn't send `config`, the
 app falls back to guesses: a board groups by the first select field, a gallery uses the first image

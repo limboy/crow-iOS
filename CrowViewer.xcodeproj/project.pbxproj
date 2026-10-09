@@ -17,6 +17,7 @@
 		2189A1FF74B3BC351C14D33E /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A681D3D1411E9B0D9E710B /* GridView.swift */; };
 		2B816A4A162781E3BBF35F93 /* CardViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEE285E186FD01BE86B7418 /* CardViews.swift */; };
 		62DE081BB4A7E93D1838DD32 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FC22DB338EFE5B8856DD49 /* DashboardView.swift */; };
+		807F9C310FFC7E603A7E1EAD /* ResponseCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012C0BE955CB54851BC6C3DC /* ResponseCache.swift */; };
 		D0A47A693CDC4BD5591BDD7A /* FieldsSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852DF13A1E8FE1548EE764B2 /* FieldsSheet.swift */; };
 		D7689CCC82BC3051C50B4D36 /* DocumentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2F5DD54A0730D599BD98C1 /* DocumentsView.swift */; };
 		DED006C1336DB85A9FB59A61 /* FieldValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F88EE48DA625D18CE2E98 /* FieldValueView.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		012C0BE955CB54851BC6C3DC /* ResponseCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseCache.swift; sourceTree = "<group>"; };
 		01FC22DB338EFE5B8856DD49 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		1C5665CD686A863BC651A595 /* Formatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatting.swift; sourceTree = "<group>"; };
 		30A681D3D1411E9B0D9E710B /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 			children = (
 				88BF57A67F826CC854EBEF6F /* CrowAPI.swift */,
 				5F822A1A85CA8FD6C3BF2878 /* RecordLoader.swift */,
+				012C0BE955CB54851BC6C3DC /* ResponseCache.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 				075476B24A9F1B50965A94B3 /* Models.swift in Sources */,
 				F22E6D10A1C030AB1BD69CE1 /* RecordDetailView.swift in Sources */,
 				0586FEDBDE798888CA987909 /* RecordLoader.swift in Sources */,
+				807F9C310FFC7E603A7E1EAD /* ResponseCache.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

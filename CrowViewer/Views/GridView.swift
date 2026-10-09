@@ -34,7 +34,7 @@ struct GridView: View {
         .onScrollGeometryChange(for: CGSize.self) { $0.containerSize } action: { _, size in
             viewport = size
         }
-        .refreshable { await loader.reload() }
+        .refreshable { await loader.reload(revalidate: true) }
     }
 
     private func header(_ fields: [FieldSchema]) -> some View {

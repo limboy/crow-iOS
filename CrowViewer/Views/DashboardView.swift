@@ -53,7 +53,7 @@ struct DashboardView: View {
         }
         .background(Color(.systemGroupedBackground))
         .task(id: context.table.id) { await load() }
-        .refreshable { await load() }
+        .refreshable { await load(revalidate: true) }
     }
 
     private func card(_ title: String, @ViewBuilder content: () -> some View) -> some View {
@@ -67,7 +67,7 @@ struct DashboardView: View {
     }
 
     /// Counts come from `totalItems` of one-record pages, one request per bucket.
-    private func load() async {
+    private func load(revalidate: Bool = false) async {
         for field in groupFields {
             var buckets: [(String, String, Color, JSONValue)] = []
             if field.type == .checkbox {
@@ -82,7 +82,7 @@ struct DashboardView: View {
                         var query = CrowAPI.RecordQuery()
                         query.whereClause = [field.name: bucket.3]
                         let api = context.api, doc = context.doc, table = context.table.name
-                        group.addTask { (i, try await api.records(doc: doc, table: table, query: query, page: 1, perPage: 1).totalItems) }
+                        group.addTask { (i, try await api.records(doc: doc, table: table, query: query, page: 1, perPage: 1, revalidate: revalidate).totalItems) }
                     }
                     var counts = Array(repeating: 0, count: buckets.count)
                     for try await (i, n) in group { counts[i] = n }

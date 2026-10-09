@@ -8,12 +8,14 @@ struct DocumentSummary: Decodable, Identifiable, Hashable {
     let name: String
     let projectId: String
     let updatedAt: String?
+    /// Changes whenever the document does. Sent by newer crow-service.
+    let version: String?
     let tables: [TableSummary]
 
     var id: String { name }
 
     enum CodingKeys: String, CodingKey {
-        case name, updatedAt, tables
+        case name, updatedAt, version, tables
         case projectId = "id"
     }
 }

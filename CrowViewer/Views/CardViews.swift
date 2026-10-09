@@ -88,7 +88,7 @@ struct GalleryView: View {
             RecordCountFooter(loader: loader)
         }
         .background(Color(.systemGroupedBackground))
-        .refreshable { await loader.reload() }
+        .refreshable { await loader.reload(revalidate: true) }
     }
 
     private var columns: [GridItem] {
@@ -186,7 +186,7 @@ private struct KanbanColumn: View {
                     .padding(.bottom, 24)
                 }
                 .scrollIndicators(.hidden)
-                .refreshable { await loader?.reload() }
+                .refreshable { await loader?.reload(revalidate: true) }
             }
             .padding(10)
             .frame(width: 290)
@@ -254,7 +254,7 @@ struct AgendaView: View {
             }
             .listRowBackground(Color.clear)
         }
-        .refreshable { await loader.reload() }
+        .refreshable { await loader.reload(revalidate: true) }
     }
 }
 

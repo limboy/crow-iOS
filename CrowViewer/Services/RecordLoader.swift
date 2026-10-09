@@ -30,13 +30,14 @@ final class RecordLoader {
     var hasMore: Bool { page < totalPages }
     var hasLoaded: Bool { page > 0 }
 
-    func reload() async {
+    /// `revalidate` checks the server for a newer document instead of trusting the cache (pull to refresh).
+    func reload(revalidate: Bool = false) async {
         generation += 1
         page = 0
         totalPages = 1
         error = nil
         isLoading = false
-        await loadNextPage(replacing: true)
+        await loadNextPage(replacing: true, revalidate: revalidate)
     }
 
     func loadMoreIfNeeded(after record: CrowRecord) async {
@@ -44,13 +45,13 @@ final class RecordLoader {
         await loadNextPage(replacing: false)
     }
 
-    func loadNextPage(replacing: Bool = false) async {
+    func loadNextPage(replacing: Bool = false, revalidate: Bool = false) async {
         guard !isLoading, hasMore else { return }
         isLoading = true
         let gen = generation
         defer { if gen == generation { isLoading = false } }
         do {
-            let result = try await api.records(doc: doc, table: table, query: query, page: page + 1, perPage: perPage)
+            let result = try await api.records(doc: doc, table: table, query: query, page: page + 1, perPage: perPage, revalidate: revalidate)
             guard gen == generation else { return }
             let known = replacing ? [] : Set(records.map(\.id))
             let fresh = result.items.filter { !known.contains($0.id) }
