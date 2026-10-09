@@ -1,0 +1,407 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0586FEDBDE798888CA987909 /* RecordLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F822A1A85CA8FD6C3BF2878 /* RecordLoader.swift */; };
+		069655FEF9910837274D927A /* CrowAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BF57A67F826CC854EBEF6F /* CrowAPI.swift */; };
+		075476B24A9F1B50965A94B3 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = F975CA29717EEFB976157E0F /* Models.swift */; };
+		09DB07183AFB4DB1FC4CA7C5 /* Formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5665CD686A863BC651A595 /* Formatting.swift */; };
+		0CA7FFE4BCE506ECC1952F4D /* CrowViewerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA69046A3B2C5999784B74D /* CrowViewerApp.swift */; };
+		0DA365BC0E28FD4A73591D74 /* DocumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D00CFF395E7486D3654BCD /* DocumentView.swift */; };
+		1955B9D9A2A6FC23FC8BCEDA /* JSONValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFDE9E3920BF5B4C7623EA7 /* JSONValue.swift */; };
+		2189A1FF74B3BC351C14D33E /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A681D3D1411E9B0D9E710B /* GridView.swift */; };
+		2B816A4A162781E3BBF35F93 /* CardViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEE285E186FD01BE86B7418 /* CardViews.swift */; };
+		62DE081BB4A7E93D1838DD32 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FC22DB338EFE5B8856DD49 /* DashboardView.swift */; };
+		D0A47A693CDC4BD5591BDD7A /* FieldsSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852DF13A1E8FE1548EE764B2 /* FieldsSheet.swift */; };
+		D7689CCC82BC3051C50B4D36 /* DocumentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2F5DD54A0730D599BD98C1 /* DocumentsView.swift */; };
+		DED006C1336DB85A9FB59A61 /* FieldValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0F88EE48DA625D18CE2E98 /* FieldValueView.swift */; };
+		E9EFE61A393D1A385529786B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76F95EB8EF4EA9233A571D90 /* Assets.xcassets */; };
+		F22E6D10A1C030AB1BD69CE1 /* RecordDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD204F87AA5FF49D959FB7AC /* RecordDetailView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		01FC22DB338EFE5B8856DD49 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		1C5665CD686A863BC651A595 /* Formatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatting.swift; sourceTree = "<group>"; };
+		30A681D3D1411E9B0D9E710B /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
+		5D2F5DD54A0730D599BD98C1 /* DocumentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentsView.swift; sourceTree = "<group>"; };
+		5EA69046A3B2C5999784B74D /* CrowViewerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrowViewerApp.swift; sourceTree = "<group>"; };
+		5F822A1A85CA8FD6C3BF2878 /* RecordLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordLoader.swift; sourceTree = "<group>"; };
+		76F95EB8EF4EA9233A571D90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7AFDE9E3920BF5B4C7623EA7 /* JSONValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONValue.swift; sourceTree = "<group>"; };
+		852DF13A1E8FE1548EE764B2 /* FieldsSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldsSheet.swift; sourceTree = "<group>"; };
+		88BF57A67F826CC854EBEF6F /* CrowAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrowAPI.swift; sourceTree = "<group>"; };
+		AEEE285E186FD01BE86B7418 /* CardViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViews.swift; sourceTree = "<group>"; };
+		B0C4B3E12744126690CD8F69 /* CrowViewer.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = CrowViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9D405EFF9CB0BFCA8067459 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		BD204F87AA5FF49D959FB7AC /* RecordDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordDetailView.swift; sourceTree = "<group>"; };
+		E4D00CFF395E7486D3654BCD /* DocumentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentView.swift; sourceTree = "<group>"; };
+		EA0F88EE48DA625D18CE2E98 /* FieldValueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldValueView.swift; sourceTree = "<group>"; };
+		F975CA29717EEFB976157E0F /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		4A805EC85FC5D0EE8342DE2A /* App */ = {
+			isa = PBXGroup;
+			children = (
+				5EA69046A3B2C5999784B74D /* CrowViewerApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		5BCFF3F8DDDC957ED8A947A3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1C5665CD686A863BC651A595 /* Formatting.swift */,
+				7AFDE9E3920BF5B4C7623EA7 /* JSONValue.swift */,
+				F975CA29717EEFB976157E0F /* Models.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		78961AF0C85136F19CCB33B9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AEEE285E186FD01BE86B7418 /* CardViews.swift */,
+				01FC22DB338EFE5B8856DD49 /* DashboardView.swift */,
+				5D2F5DD54A0730D599BD98C1 /* DocumentsView.swift */,
+				E4D00CFF395E7486D3654BCD /* DocumentView.swift */,
+				852DF13A1E8FE1548EE764B2 /* FieldsSheet.swift */,
+				EA0F88EE48DA625D18CE2E98 /* FieldValueView.swift */,
+				30A681D3D1411E9B0D9E710B /* GridView.swift */,
+				BD204F87AA5FF49D959FB7AC /* RecordDetailView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B49E63750A082A4C3617641A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B0C4B3E12744126690CD8F69 /* CrowViewer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B9665FC7C09A4FFAF0C194ED /* CrowViewer */ = {
+			isa = PBXGroup;
+			children = (
+				76F95EB8EF4EA9233A571D90 /* Assets.xcassets */,
+				B9D405EFF9CB0BFCA8067459 /* Info.plist */,
+				4A805EC85FC5D0EE8342DE2A /* App */,
+				5BCFF3F8DDDC957ED8A947A3 /* Models */,
+				D370A84F715BC970AC9ED4A7 /* Services */,
+				78961AF0C85136F19CCB33B9 /* Views */,
+			);
+			path = CrowViewer;
+			sourceTree = "<group>";
+		};
+		D370A84F715BC970AC9ED4A7 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				88BF57A67F826CC854EBEF6F /* CrowAPI.swift */,
+				5F822A1A85CA8FD6C3BF2878 /* RecordLoader.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		FD9209B2FA7B8629C25DAE35 = {
+			isa = PBXGroup;
+			children = (
+				B9665FC7C09A4FFAF0C194ED /* CrowViewer */,
+				B49E63750A082A4C3617641A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8A012E215897464F7B95D5C7 /* CrowViewer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0CFE197AF80AA2621D074C41 /* Build configuration list for PBXNativeTarget "CrowViewer" */;
+			buildPhases = (
+				C3A80F2CFC742C246AB764C0 /* Sources */,
+				5D9CE1480E61C606D09B5975 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CrowViewer;
+			packageProductDependencies = (
+			);
+			productName = CrowViewer;
+			productReference = B0C4B3E12744126690CD8F69 /* CrowViewer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A3083EAE839D13FB7E9CEACD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+				};
+			};
+			buildConfigurationList = 4A8F1F70DF01C2E6BA7DAA6B /* Build configuration list for PBXProject "CrowViewer" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = FD9209B2FA7B8629C25DAE35;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = B49E63750A082A4C3617641A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8A012E215897464F7B95D5C7 /* CrowViewer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5D9CE1480E61C606D09B5975 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9EFE61A393D1A385529786B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C3A80F2CFC742C246AB764C0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B816A4A162781E3BBF35F93 /* CardViews.swift in Sources */,
+				069655FEF9910837274D927A /* CrowAPI.swift in Sources */,
+				0CA7FFE4BCE506ECC1952F4D /* CrowViewerApp.swift in Sources */,
+				62DE081BB4A7E93D1838DD32 /* DashboardView.swift in Sources */,
+				0DA365BC0E28FD4A73591D74 /* DocumentView.swift in Sources */,
+				D7689CCC82BC3051C50B4D36 /* DocumentsView.swift in Sources */,
+				DED006C1336DB85A9FB59A61 /* FieldValueView.swift in Sources */,
+				D0A47A693CDC4BD5591BDD7A /* FieldsSheet.swift in Sources */,
+				09DB07183AFB4DB1FC4CA7C5 /* Formatting.swift in Sources */,
+				2189A1FF74B3BC351C14D33E /* GridView.swift in Sources */,
+				1955B9D9A2A6FC23FC8BCEDA /* JSONValue.swift in Sources */,
+				075476B24A9F1B50965A94B3 /* Models.swift in Sources */,
+				F22E6D10A1C030AB1BD69CE1 /* RecordDetailView.swift in Sources */,
+				0586FEDBDE798888CA987909 /* RecordLoader.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1FA5418681C5EB8E3E5524BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		5162227D151941BD171DEEB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CrowViewer/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Crow;
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Crow connects to your crow service on the local network to show your documents.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.limboy.CrowViewer;
+				PRODUCT_NAME = Crow;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E34186B8E1DAEF8188C2DDEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CrowViewer/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Crow;
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Crow connects to your crow service on the local network to show your documents.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.limboy.CrowViewer;
+				PRODUCT_NAME = Crow;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EFA568E99E6A30E3D037CD9F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0CFE197AF80AA2621D074C41 /* Build configuration list for PBXNativeTarget "CrowViewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5162227D151941BD171DEEB5 /* Debug */,
+				E34186B8E1DAEF8188C2DDEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		4A8F1F70DF01C2E6BA7DAA6B /* Build configuration list for PBXProject "CrowViewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FA5418681C5EB8E3E5524BF /* Debug */,
+				EFA568E99E6A30E3D037CD9F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A3083EAE839D13FB7E9CEACD /* Project object */;
+}
