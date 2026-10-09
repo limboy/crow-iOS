@@ -18,6 +18,8 @@ nonisolated final class ResponseCache: Sendable {
     private let root: URL
     /// Document scope → its latest known version.
     private let versions: Mutex<[String: String]>
+    /// Document scope → records seen in lists this session, with their linked records, by id.
+    private let listed = Mutex<[String: [String: CrowRecord]]>([:])
 
     init(root: URL = .cachesDirectory.appending(path: "CrowAPI", directoryHint: .isDirectory)) {
         self.root = root
@@ -44,6 +46,25 @@ nonisolated final class ResponseCache: Sendable {
         try? FileManager.default.removeItem(at: directory(for: scope))
         try? FileManager.default.createDirectory(at: root, withIntermediateDirectories: true)
         try? PropertyListEncoder().encode(snapshot).write(to: root.appending(path: "versions.plist"), options: .atomic)
+    }
+
+    /// Keeps listed records, and the linked records expanded into them, so a record can open
+    /// offline without having been opened before.
+    func remember(_ records: [CrowRecord], in scope: String) {
+        listed.withLock { map in
+            var known = map[scope] ?? [:]
+            for record in records {
+                for linked in (record.expand ?? [:]).values.joined() where known.index(forKey: linked.id) == nil {
+                    known[linked.id] = linked
+                }
+                if record.expand != nil || known[record.id].flatMap(\.expand) == nil { known[record.id] = record }
+            }
+            map[scope] = known
+        }
+    }
+
+    func listedRecord(_ id: String, in scope: String) -> CrowRecord? {
+        listed.withLock { $0[scope]?[id] }
     }
 
     func entry(for url: URL, in scope: String?) -> Entry? {

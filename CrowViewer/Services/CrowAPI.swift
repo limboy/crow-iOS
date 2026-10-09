@@ -46,12 +46,20 @@ struct CrowAPI: Sendable {
         if !query.whereClause.isEmpty, let data = try? JSONEncoder().encode(query.whereClause) {
             items.append(.init(name: "where", value: String(decoding: data, as: UTF8.self)))
         }
-        return try await get(RecordPage.self, path: ["documents", doc, "tables", table, "records"], query: items, doc: doc, revalidate: revalidate)
+        let page = try await get(RecordPage.self, path: ["documents", doc, "tables", table, "records"], query: items, doc: doc, revalidate: revalidate)
+        cache.remember(page.items, in: scope(doc))
+        return page
     }
 
     func record(doc: String, table: String, id: String, expand: [String], revalidate: Bool = false) async throws -> CrowRecord {
         let items = expand.isEmpty ? [] : [URLQueryItem(name: "expand", value: expand.joined(separator: ","))]
-        return try await get(CrowRecord.self, path: ["documents", doc, "tables", table, "records", id], query: items, doc: doc, revalidate: revalidate)
+        do {
+            return try await get(CrowRecord.self, path: ["documents", doc, "tables", table, "records", id], query: items, doc: doc, revalidate: revalidate)
+        } catch let error as URLError where error.code != .cancelled {
+            // Offline and never opened: use the copy a list loaded.
+            if let listed = cache.listedRecord(id, in: scope(doc)) { return listed }
+            throw error
+        }
     }
 
     // MARK: -
