@@ -20,6 +20,7 @@ struct DocumentsView: View {
         }
         .overlay { emptyState }
         .navigationTitle("Crow")
+        .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
                 Button("Server", systemImage: "server.rack") { showingSettings = true }
