@@ -18,9 +18,11 @@ struct DocumentsView: View {
                 }
             }
         }
+        // List leaves a tall gap above its first section; the title already separates it.
+        .contentMargins(.top, 8, for: .scrollContent)
         .overlay { emptyState }
         .navigationTitle("Crow")
-        .navigationBarTitleDisplayMode(.inline)
+        .toolbarTitleDisplayMode(.inlineLarge)
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
                 Button("Server", systemImage: "server.rack") { showingSettings = true }
