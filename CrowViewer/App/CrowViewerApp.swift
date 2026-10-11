@@ -1,3 +1,4 @@
+import AVFoundation
 import SwiftUI
 
 @main
@@ -5,6 +6,8 @@ struct CrowViewerApp: App {
     init() {
         // Media is served with Cache-Control, so a roomy URL cache keeps images instant on revisit.
         URLCache.shared = URLCache(memoryCapacity: 64 << 20, diskCapacity: 512 << 20)
+        // The default .soloAmbient category is muted by the silent switch; media playback should not be.
+        try? AVAudioSession.sharedInstance().setCategory(.playback)
     }
 
     var body: some Scene {
