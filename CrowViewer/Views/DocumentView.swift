@@ -7,7 +7,7 @@ struct DocumentView: View {
 
     @State private var schema: DocumentSchema?
     @State private var error: Error?
-    @SceneStorage("table") private var tableName = ""
+    @AppStorage private var tableId: String
     @State private var viewId: String?
 
     @State private var searchText = ""
@@ -16,6 +16,13 @@ struct DocumentView: View {
     @State private var filter: FilterOption?
     @State private var prefs = ViewPrefs()
     @State private var showingFields = false
+
+    init(api: CrowAPI, name: String) {
+        self.api = api
+        self.name = name
+        let documentURL = api.url(path: ["documents", name])
+        _tableId = AppStorage(wrappedValue: "", "selectedTable/\(documentURL.absoluteString)")
+    }
 
     var body: some View {
         Group {
@@ -61,7 +68,7 @@ struct DocumentView: View {
 
     private var table: TableSchema? {
         guard let schema else { return nil }
-        return schema.tables.first { $0.name == tableName } ?? schema.tables.first
+        return schema.tables.first { $0.id == tableId } ?? schema.tables.first
     }
 
     private var views: [ViewSchema] {
@@ -74,10 +81,21 @@ struct DocumentView: View {
     }
 
     private func select(table t: TableSchema) {
-        tableName = t.name
-        viewId = nil
+        tableId = t.id
+        viewId = UserDefaults.standard.string(forKey: selectedViewKey(for: t))
         sortOverride = nil
         filter = nil
+    }
+
+    private func selectedViewKey(for table: TableSchema) -> String {
+        let tableURL = api.url(path: ["documents", name, "tables", table.id])
+        return "selectedView/\(tableURL.absoluteString)"
+    }
+
+    private func select(view id: String) {
+        guard let table else { return }
+        viewId = id
+        UserDefaults.standard.set(id, forKey: selectedViewKey(for: table))
     }
 
     private func query(for table: TableSchema) -> CrowAPI.RecordQuery {
@@ -109,6 +127,9 @@ struct DocumentView: View {
     private func loadSchema() async {
         do {
             schema = try await api.document(name)
+            if let table {
+                viewId = UserDefaults.standard.string(forKey: selectedViewKey(for: table))
+            }
             error = nil
         } catch is CancellationError {
         } catch {
@@ -122,7 +143,7 @@ struct DocumentView: View {
         if let table {
             ToolbarItem(placement: .topBarTrailing) {
                 Menu {
-                    Picker("View", selection: Binding(get: { view.id }, set: { viewId = $0 })) {
+                    Picker("View", selection: Binding(get: { view.id }, set: { select(view: $0) })) {
                         ForEach(views) { v in
                             Label(v.name, systemImage: v.symbol).tag(v.id)
                         }

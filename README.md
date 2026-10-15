@@ -3,7 +3,8 @@
 A read-only iOS 26+ viewer for [Crow](https://github.com/limboy/crow) documents, served by [crow-service](https://github.com/limboy/crow-service).
 
 - **Documents** — every `.crow` document on the server, with its tables and record counts
-- **Saved views** — each table opens on its saved views:
+- **Saved views** — remembers the last table and each table's selected view on this device,
+  per server and document, even after relaunch:
   - **Table** — a spreadsheet grid with a pinned header, scrolling both ways
   - **Kanban** — one column per choice of a select field
   - **Gallery** — cards with cover images
